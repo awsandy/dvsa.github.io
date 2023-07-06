@@ -21,7 +21,7 @@ If you would like to, you can complete the
 
 After the above steps please try these Squid/ECS/PHP lab activities:
 
-* [LAB-1.md]./(LAB-1.md) - Run a squid proxy on ECS/Fargate
+* [LAB-1.md](./LAB-1.md) - Run a squid proxy on ECS/Fargate
 
 * [LAB-2.md](.//LAB-2.md) - Run an application and observe it's performance
 
