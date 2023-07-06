@@ -4,10 +4,8 @@ chapter: true
 weight: 12
 ---
 
-### Running the workshop using the AWS Workshop Studio
+### Running the workshop using AWS Workshop Studio
 
-::alert[Only complete this section if you are at an AWS hosted event (such as re\:Invent,Kubecon, Immersion Day, or any other event hosted by an AWS employee).]
-::
 
 - [Connect to Studio](./portal.md)
 

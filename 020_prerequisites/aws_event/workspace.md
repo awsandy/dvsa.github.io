@@ -6,7 +6,9 @@ weight: 23
 ##
 
 
-::alert[Ad blockers, javascript disabler, and tracking blockers should be disabled for the cloud9 domain, or connecting to the workspace might be impacted. Cloud9 requires third-party-cookies. You can whitelist the [specific domains]( https://docs.aws.amazon.com/cloud9/latest/user-guide/troubleshooting.html#troubleshooting-env-loading).]{type=warning}
+#### Ad blockers, javascript disabler, and tracking blockers should be disabled for the cloud9 domain, or connecting to the workspace might be impacted. Cloud9 requires third-party-cookies. You can whitelist the [specific domains]( https://docs.aws.amazon.com/cloud9/latest/user-guide/troubleshooting.html#troubleshooting-env-loading).
+
+----
 
 ### Open the pre-created Cloud9 Desktop Environment:
 
@@ -32,3 +34,7 @@ and **lower work area**, and opening a new **terminal** tab in the main work are
 
 - If you like this theme, you can choose it yourself by selecting **View / Themes / Solarized / Solarized Dark**
 in the Cloud9 workspace menu.
+
+----
+
+### [Next](../k8stools.md)

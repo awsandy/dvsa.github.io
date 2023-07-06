@@ -18,9 +18,13 @@ If this screen appears simply click `Switch Role`
 ![c9after](../../static/images/050-role1a.png)
 
 ----
-----
+
 
 Paste in the Account ID you saved and enter the role name `eksworkshop-admin` and click `switch role`
 
 ![c9after](../../static/images/role4.png)
+
+-----
+
+### [Next](./workspace.md)
 
