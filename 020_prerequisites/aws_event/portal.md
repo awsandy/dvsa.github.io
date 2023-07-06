@@ -10,15 +10,15 @@ To begin with, let's connect to the AWS Workshop Studio, which can be found here
 
 * Once the page loads, click the Join Event button which can be found on the right of the page
 
-![Event Engine](/static/images/was_join_event.png)
+![Event Engine](../../static/images/was_join_event.png)
 
 * Click the Email one-time password (OTP) button.
 
-![Event Engine](/static/images/was_request_otp.png)
+![Event Engine](static/images/was_request_otp.png)
 
 * Enter the email address used to register you for the event (this is most likely your company email address). Click Send passcode.
 
-![Event Engine](/static/images/was_enter_email_address.png)
+![Event Engine](./static/images/was_enter_email_address.png)
 
 * After a few moments a one-time password (OTP) will arrive in the inbox of associated with the email address you entered in the previous step. Copy the OTP and paste it in to the field labelled Passcode (9-digit) and click Sign in.
 
