@@ -15,7 +15,8 @@ Once you have logged in open the Cloud9 IDE - but **do not** run any of the setu
 
 If you would like to, you can complete the 
 
-* [Docker primer](https://catalog.workshops.aws/containers/en-US/contdock) to perform soem basic operations with containers and docker.
+* [Docker primer](https://catalog.workshops.aws/containers/en-US/contdock) to perform soe
+me basic operations with containers and docker.
 
 ----
 
