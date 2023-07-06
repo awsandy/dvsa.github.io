@@ -56,6 +56,6 @@ Use the link to `Open AWS Console` to get to the AWS console.
 
 ----
 
-### [Next](./switch-role.md)
+## [Next](./switch-role.md)
 
 

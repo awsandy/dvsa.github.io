@@ -26,5 +26,5 @@ Paste in the Account ID you saved and enter the role name `eksworkshop-admin` an
 
 -----
 
-### [Next](./workspace.md)
+## [Next](./workspace.md)
 

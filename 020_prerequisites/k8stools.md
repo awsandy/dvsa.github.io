@@ -19,25 +19,21 @@ cd ~/environment
 
 ```bash
 rm -rf ecs-squid
-git clone 
-```
-
-#### Setup the workshop tools:
-
-```bash
-cd ~/environment/tfekscode
+git clone https://github.com/awsandy/ecs-squid.git
+cd ~/environment/ecs-squid
 ```
 
 ```bash
-source setup
+source scripts/setup.sh
 ```
+
 
 Check you see messages at the end of the output that terraform, kubectl, jq and aws in the path. Also that the AWS_REGION is set and the ACCOUNT_ID to a 12 digit number.
 
 
-::::alert{type="success" header="Expected Output"}
-:::code{showCopyAction=true showLineNumbers=false language=java}
+Expected Output:
 
+```
 Install OS tools
 Install OS tools
 Update OS tools
@@ -79,8 +75,7 @@ Enable bash_completion
 PASSED: AWS_REGION is aa-west-x
 PASSED: TF_VAR_region is aa-west-x
 PASSED: ACCOUNT_ID is xxxxxxxxxxxx
-:::
-::::
+```
 
 
 ---
@@ -88,21 +83,21 @@ PASSED: ACCOUNT_ID is xxxxxxxxxxxx
 #### Check the Cloud9 IDE is setup correctly:
 
 ```bash
-./check
+./check.sh
 ```
 
 Provided the Cloud9 workspace was setup as described the following script should show 3x `PASSED:` messages:
 
-::::alert{type="success" header="Expected Output"}
-:::code{showCopyAction=true showLineNumbers=false language=java}
+```
 Checking workshop setup ...
 PASSED: Cloud9 IDE name is valid - contains eks-terraform
 PASSED: IAM role valid - eksworkshop-admin
 PASSED: Found Instance profile eksworkshop-admin - proceed with the workshop
-:::
-::::
+```
 
 ----
 
-Proceed to the next step
+## [Next](./workspaceiam.md)
+
+
 
