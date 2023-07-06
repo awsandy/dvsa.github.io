@@ -5,7 +5,9 @@
 The AWS staff will provide details of how to access the AWS accounts.
 
 
-Once you have logged in open the Cloud9 IDE - but **do not** run any of the setup instructions
+Once you have logged in open the Cloud9 IDE 
+
+[login & setup]020_prerequisites/index.en.md
 
 -----
 
@@ -24,7 +26,7 @@ After the above steps please try these Squid/ECS/PHP lab activities:
 
 * [LAB-1.md](./LAB-1.md) - Run a squid proxy on ECS/Fargate
 
-* [LAB-2.md](.//LAB-2.md) - Run an application and observe it's performance
+* [LAB-2.md](./LAB-2.md) - Run an application and observe it's performance
 
 * [LAB-3.md](./LAB-3.md) - Dockerize php applications and host them on ECS
 
