@@ -20,11 +20,11 @@ If you would like to, you can complete the
 
 After the above steps please try these Squid/ECS/PHP lab activities:
 
-* [LAB-1.md](./LAB-1.md) - Run a squid proxy on ECS/Fargate
+* [LAB-1.md](./LAB-1.md) - Build and run a squid proxy on ECS/Fargate using Terraform
 
 * [LAB-2.md](./LAB-2.md) - Run an application and observe it's performance
 
-* [LAB-3.md](./LAB-3.md) - Dockerize php applications and host them on ECS
+* [LAB-3.md](./LAB-3.md) - Dockerize php applications and host them on ECS/Fargate
 
 
 -----
