@@ -7,7 +7,7 @@ The AWS staff will provide details of how to access the AWS accounts.
 
 Once you have logged in open the Cloud9 IDE 
 
-[login & setup]020_prerequisites/index.en.md
+[login & setup](020_prerequisites/index.en.md)
 
 -----
 
