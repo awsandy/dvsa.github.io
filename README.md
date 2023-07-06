@@ -11,14 +11,10 @@ Once you have logged in open the Cloud9 IDE
 
 -----
 
-* [SETUP.md](./SETUP.md) - Run to complete the lab initialization
-
------
-
 If you would like to, you can complete the 
 
-* [Docker primer](https://catalog.workshops.aws/containers/en-US/contdock) to perform soe
-me basic operations with containers and docker.
+* [Docker primer](https://catalog.workshops.aws/containers/en-US/contdock) to perform some
+ basic operations with containers and docker.
 
 ----
 

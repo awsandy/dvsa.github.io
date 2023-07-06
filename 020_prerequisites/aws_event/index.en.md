@@ -11,7 +11,7 @@ weight: 12
 
 - [Switch Role](./switch-role.md)
 
-- [Open the Woekspace](./workspace.md)
+- [Open the Workspace](./workspace.md)
 
 
 ----
