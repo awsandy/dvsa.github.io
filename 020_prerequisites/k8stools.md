@@ -18,8 +18,8 @@ cd ~/environment
 ```
 
 ```bash
-rm -rf tfekscode
-git clone https://github.com/aws-samples/terraform-eks-code.git tfekscode
+rm -rf ecs-squid
+git clone 
 ```
 
 #### Setup the workshop tools:

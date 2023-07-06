@@ -14,6 +14,8 @@ To start the workshop, follow the following instructions ...
 
 * [attending an AWS hosted event (using AWS provided hashes)](./aws_event/index.en.md) 
 
+* [Install Tools](./k8stools.md) 
+
 
 
 

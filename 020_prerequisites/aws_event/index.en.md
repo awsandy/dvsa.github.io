@@ -9,5 +9,9 @@ weight: 12
 ::alert[Only complete this section if you are at an AWS hosted event (such as re\:Invent,Kubecon, Immersion Day, or any other event hosted by an AWS employee).]
 ::
 
-[Connect to Studio](./portal.md)
+- [Connect to Studio](./portal.md)
+
+- [Switch Role](./switch-role.md)
+
+- [Open the Woekspace](./workspace.md)
 
