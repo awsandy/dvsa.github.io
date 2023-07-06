@@ -28,3 +28,5 @@ After the above steps please try these Squid/ECS/PHP lab activities:
 
 
 -----
+
+* [Wrap Up](./WRAPUP.md)

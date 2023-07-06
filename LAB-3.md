@@ -1,4 +1,7 @@
-## Using CNCF Build packs
+
+## Using CNCF Build packs
+
+----
 
 ### Install the CNCF pack tool
 
@@ -28,13 +31,31 @@ curl http://localhost:8080
 
 or preview app in Cloud9
 
----------------
+-----------
 
-Explore the other examples here:
+### Deploy the app to ECR
 
-https://github.com/paketo-buildpacks/samples/tree/main/php
+Push the docker image to ECR
 
-and in the cloned samples directory
+Use terraform to create 
+
+An ECS Task definition using the ECR image
+An Service for this application 
+
+
+-------
+
+
+### Explore the other examples here:
+
+cd ~environment/lab3/samples/tree/main/php
+
+Repeat the above steps
+
+
+-----
+
+## [Next](./WRAPUP.md)
 
 
 
