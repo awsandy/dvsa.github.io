@@ -51,7 +51,7 @@ Update pip
 Uninstall AWS CLI v1
 Install AWS CLI v2
 AWS_REGION is eu-west-1
-export ACCOUNT_ID=313897021708
+export ACCOUNT_ID=xxxxxxxx
 export AWS_REGION=eu-west-1
 export AZS=(eu-west-1a eu-west-1b eu-west-1c)
 export TF_VAR_region=eu-west-1
@@ -94,7 +94,7 @@ Enable bash_completion
 bash: /home/ec2-user/.bash_completion: No such file or directory
 PASSED: AWS_REGION is eu-west-1
 PASSED: TF_VAR_region is eu-west-1
-PASSED: ACCOUNT_ID is 313897021708
+PASSED: ACCOUNT_ID is xxxxxxxxxxxx
 bash: cd: /home/ec2-user/environment/tfekscode/lb2: No such file or directory
 Associate eksworkshop-admin
 {
@@ -102,7 +102,7 @@ Associate eksworkshop-admin
         "AssociationId": "iip-assoc-0d839a7047a0a431f",
         "InstanceId": "i-0fcc60d545d4addfb",
         "IamInstanceProfile": {
-            "Arn": "arn:aws:iam::313897021708:instance-profile/cloud9/eksworkshop-admin",
+            "Arn": "arn:aws:iam::xxxxxxxxxxxx:instance-profile/cloud9/eksworkshop-admin",
             "Id": "AIPAUSFNYOEGFBNZR63WM"
         },
         "State": "associating"
