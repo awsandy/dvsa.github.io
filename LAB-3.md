@@ -9,12 +9,15 @@
 (curl -sSL "https://github.com/buildpacks/pack/releases/download/v0.29.0/pack-v0.29.0-linux.tgz" | sudo tar -C /usr/local/bin/ --no-same-owner -xzv pack)
 ```
 
-### Clone the demo:
+### Use the paketo build pack:
 
 ```bash
-git clone https://github.com/paketo-buildpacks/samples
-cd samples/php/builtin-server
+pack config default-builder paketobuildpacks/builder:full
 ```
+
+### Clone the demo:
+
+
 
 ```bash
 pack build my-app --buildpack paketo-buildpacks/php \
