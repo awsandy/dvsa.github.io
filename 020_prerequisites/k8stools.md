@@ -4,12 +4,8 @@ chapter: false
 weight: 28
 ---
 
-Amazon EKS clusters require - kubectl, the aws-cli or aws-iam-authenticator
-binary to allow IAM authentication for your Kubernetes cluster.
 
-
-
-#### Install the tools
+## Install the tools required for the workshop
 
 Clone the workshop repo and use a helper script to setup the workshop tools: 
 
