@@ -138,7 +138,7 @@ terraform apply tfplan
 
 ----------
 
-From your Cloud9 IDE terminal get and save the VPC endpoint:
+From your Cloud9 IDE terminal get and save the VPC endpoint DNS entry:
 
 ```bash
 aws ssm get-parameter --name /ecsworkshop/proxy-dns --query Parameter.Value --output text
