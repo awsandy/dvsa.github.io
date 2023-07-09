@@ -4,8 +4,7 @@
 
 The AWS staff will provide details of how to access the AWS accounts.
 
-
-Once you have logged in open the Cloud9 IDE 
+Follow these directions to login and start a Cloud9 IDE 
 
 [login & setup](020_prerequisites/index.en.md){:target="_blank"}
 
@@ -13,8 +12,7 @@ Once you have logged in open the Cloud9 IDE
 
 If you would like to, you can complete the 
 
-* [Docker primer](https://catalog.workshops.aws/containers/en-US/contdock){:target="_blank"} to perform some
- basic operations with containers and docker.
+* [Docker primer](https://catalog.workshops.aws/containers/en-US/contdock){:target="_blank"} to perform some basic operations with containers and docker.
 
 ----
 
