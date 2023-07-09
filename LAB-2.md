@@ -18,6 +18,9 @@ terraform apply tfplan
 
 ----
 
+Monitor the ECS console and wait for all the services Last Deployment state to be indicated as  `completed`
+
+
 Start a siege (worklaod)
 
 get the load balancer DNS name
