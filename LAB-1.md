@@ -20,8 +20,8 @@ terraform apply tfplan
 
 Using the console find and explore these resources
 
-* [The ECS Clusters](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters)
-* [ECS service](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1)
+* [The ECS Clusters](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters){:target="_blank"}
+* [ECS service](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1){:target="_blank"}
 * ECS tasks
 * Task definitions
 * Load Balancers
@@ -59,11 +59,11 @@ cd ~/environment/ecs-squid/lab1/scripts
 ./custom-squid.sh
 ```
 
-Track the build in [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=eu-west-1) and 
-[code build](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects?region=eu-west-1)
+Track the build in [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=eu-west-1){:target="_blank"}  and 
+[code build](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects?region=eu-west-1){:target="_blank"}
 
 After the built completes:
-Observe the [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1) for the new custom squid image
+Observe the [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1){:target="_blank"} for the new custom squid image
 
 
 -------
