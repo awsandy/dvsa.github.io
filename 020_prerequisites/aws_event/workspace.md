@@ -14,7 +14,7 @@ weight: 23
 
 ### Open the pre-created Cloud9 Desktop Environment:
 
-Select the `eks-terraform` Cloud9 Environment using this link: [https://eu-west-2.console.aws.amazon.com/cloud9/home](https://eu-west-2.console.aws.amazon.com/cloud9/home)
+Select the `eks-terraform` Cloud9 Environment using this link: [https://eu-west-1.console.aws.amazon.com/cloud9/home](https://eu-west-1.console.aws.amazon.com/cloud9/home)
 
 
 - Click **`Open in Cloud9`**

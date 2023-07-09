@@ -38,9 +38,9 @@ siege -c 20 -i http://$lbdns
 
 ### Explore the observabilty of the deployed application:
 
-[Using Container Insights](https://eu-west-2.console.aws.amazon.com/cloudwatch/home?region=eu-west-2#container-insights:infrastructure/map)
+[Using Container Insights](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#container-insights:infrastructure/map)
 
-[Using X-Ray](https://eu-west-2.console.aws.amazon.com/cloudwatch/home?region=eu-west-2#xray:service-map/map)
+[Using X-Ray](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#xray:service-map/map)
 
 
 

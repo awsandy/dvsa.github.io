@@ -51,7 +51,7 @@ cd ~/environment/ecs-squid/lab3/tf-app
 Find the load balancer URL
 
 ```
-lb-url=$(aws ssm get-parameter --name /ecsworkshop/proxy-dns --region eu-west-2 --query Parameter.Value --output text)
+lb-url=$(aws ssm get-parameter --name /ecsworkshop/proxy-dns --region eu-west-1 --query Parameter.Value --output text)
 
 curl $lb-url:8080
 

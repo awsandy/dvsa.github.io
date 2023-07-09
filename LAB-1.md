@@ -20,8 +20,8 @@ terraform apply tfplan
 
 Using the console find and explore these resources
 
-* [The ECS Clusters](https://eu-west-2.console.aws.amazon.com/ecs/v2/clusters)
-* ECS service
+* [The ECS Clusters](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters)
+* [ECS service](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1)
 * ECS tasks
 * Task definitions
 * Load Balancers
@@ -33,13 +33,13 @@ Note which task definition is deployed and which container image
 ### Setup a custom squid docker image
 
 
-Examine the files in thsi directory
+Examine the files in this directory
 
 ```bash
 cd ~/environment/ecs-squid/lab1/squid-docker
 ```
 
-including out own allow list `allowedlist.txt` which contains one entry:
+including our own allow list `allowedlist.txt` which contains one entry:
 
 ```
 aws.amazon.com
@@ -73,7 +73,7 @@ Observe the [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories
 ### Check the ECR repo for the custom squid image
 
 ```bash
-cd ~/environment/ecs-squid/tf-squid
+cd ~/environment/ecs-squid/lab1/tf-squid
 ```
 
 Observe the difference in these two files definition of which image to use:
@@ -83,7 +83,7 @@ grep task_definition aws_ecs_service__squid-ecr-ECSService.tf
 ```
 
 ```bash
-grep task_definition aws_ecs_service__squid-ecr-ECSService.tf.cust
+grep task_definition aws_ecs_service__squid-ecr-ECSService.tf.custom
 ```
 
 and the corresponding different images in the task definitions
@@ -139,12 +139,12 @@ terraform apply tfplan
 ----------
 
 
-Connect to the insytance via [SSM Fleet](https://eu-west-2.console.aws.amazon.com/systems-manager/managed-instances?region=eu-west-2)
+Connect to the instance via [SSM Fleet](https://eu-west-1.console.aws.amazon.com/systems-manager/managed-instances?region=eu-west-1)
 
 From the OS prompt:
 
 ```bash
-proxyurl=$(aws ssm get-parameter --name /ecsworkshop/proxy-dns --region eu-west-2 --query Parameter.Value --output text)
+proxyurl=$(aws ssm get-parameter --name /ecsworkshop/proxy-dns --query Parameter.Value --output text)
 export http_proxy=http://${proxyurl}:3128
 export https_proxy=http://${proxyurl}:3128
 ```
