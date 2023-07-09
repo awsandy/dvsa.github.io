@@ -23,7 +23,7 @@ git clone https://github.com/awsandy/ecs-squid.git
 cd ~/environment/ecs-squid
 ```
 
-Next run the setup script to install various tools we wil use in the workshop, setup some environment variables, resize the root file system to 32GB and change the Cloud9 IDE to use the predefined `eksworkshop-admin` instance profile/role.
+Next run the setup script to install various tools we will use in the workshop, setup some environment variables, resize the root file system to 32GB and change the Cloud9 IDE to use the predefined `eksworkshop-admin` instance profile/role.
 
 ```bash
 source scripts/setup.sh

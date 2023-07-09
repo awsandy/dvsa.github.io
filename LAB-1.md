@@ -32,37 +32,80 @@ Note which task definition is deployed and which container image
 
 ### Setup a custom squid docker image
 
+
+Examine the files in thsi directory
+
 ```bash
-squid/setup-custom-squid.sh
+cd ~/environment/ecs-squid/lab1/squid-docker
 ```
 
-Track the build in code pipeline / build
+including out own allow list `allowedlist.txt` which contains one entry:
 
-Observe the ECR repo
+```
+aws.amazon.com
+```
+
+And the `Dockerfile` for building the custom container image.
+
+
+----
+
+
+The following script will then use these files to build a custom image for squid - using a CICD pipeline that has already been setup:
+
+
+```bash
+cd ~/environment/ecs-squid/lab1/scripts
+./custom-squid.sh
+```
+
+Track the build in [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=eu-west-1) and 
+[code build](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects?region=eu-west-1)
+
+After the built completes:
+Observe the [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1) for the new custom squid image
 
 
 -------
 
-## Adjust Terraform to deploy our squid container
+## Adjust Terraform to deploy our custom squid container
 
 ### Check the ECR repo for the custom squid image
 
 ```bash
-cd cd ~/environment/ecs-squid/tf-squid
+cd ~/environment/ecs-squid/tf-squid
 ```
 
-edit the file:    `aws_ecs_service__squid-ecr-ECSCluster__squid-ecr-ECSService.tf`
+Observe the difference in these two files definition of which image to use:
 
-Change this line:
+```bash
+grep task_definition aws_ecs_service__squid-ecr-ECSService.tf
+```
 
-`task_definition       = aws_ecs_task_definition.squid--standard-ecr-ECSTaskDefinition.arn`
+```bash
+grep task_definition aws_ecs_service__squid-ecr-ECSService.tf.cust
+```
 
-to:
+and the corresponding different images in the task definitions
 
-`task_definition       = aws_ecs_task_definition.squid--custom-ecr-ECSTaskDefinition.arn`
+```bash
+grep image aws_ecs_task_definition__squip--standard-ecr-ECSTaskDefinition.tf
+```
+
+image = "public.ecr.aws/ubuntu/**squid**:latest"
+
+```bash
+grep image aws_ecs_task_definition__squid--custom-ecr-ECSTaskDefinition.tf
+```
+
+image = format("%s.dkr.ecr.%s.amazonaws.com/**squid-ecr-ecrrepository**:latest", data.aws_caller_identity.current.account_id, data.aws_region.current.name)
 
 
-**save your changes !**
+Next copy the custom service definition into place:
+
+```bash 
+cp aws_ecs_service__squid-ecr-ECSService.tf.custom aws_ecs_service__squid-ecr-ECSService.tf
+```
 
 Confirm the change being made with terraform plan
 
@@ -72,14 +115,15 @@ terraform plan -out tfplan
 
 Apply the change:
 
-```
+```bash
 terraform apply tfplan
 ```
 
 -------
 
 
-Next deploy a test instance
+## Deploy a test instance
+
 
 ```bash
 cd ~/environment/ecs-squid/lab1/test-instance
@@ -91,7 +135,6 @@ terraform validate
 terraform plan -out tfplan
 terraform apply tfplan
 ```
-
 
 ----------
 
@@ -108,6 +151,7 @@ export https_proxy=http://${proxyurl}:3128
 
 
 ### this works
+
 ```bash
 curl https://aws.amazon.com
 ```
@@ -118,11 +162,11 @@ curl https://aws.amazon.com
 curl https://www.microsoft.com
 ```
 
-
-
 -------
 
+
 ## Cleanup
+
 
 ```bash
 cd ~/environment/ecs-squid/lab1/test-instance
