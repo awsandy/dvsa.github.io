@@ -40,6 +40,7 @@ run the image locally:
 docker run --interactive --tty --env PORT=8080 --publish 8080:8080 my-app
 ```
 
+----
 
 From another terminal:
 
@@ -61,8 +62,8 @@ Expected output similar to:
 ```
 
 
-
 -----------
+
 
 ### Deploy the app to ECR
 
@@ -82,11 +83,17 @@ export TF_VAR_app_name=my-app
 cd ~/environment/ecs-squid/lab3/tf-app
 ```
 
+```bash
+terraform init
+terraform plan -out tfplan && terraform apply tfplan
+
+```
+
 
 Find the load balancer URL
 
 ```
-lb-url=$(aws ssm get-parameter --name /ecsworkshop/proxy-dns --region eu-west-1 --query Parameter.Value --output text)
+lburl=$(aws ssm get-parameter --name /ecsworkshop/squid-lbdns --region eu-west-1 --query Parameter.Value --output text)
 
 curl $lb-url:8080
 
