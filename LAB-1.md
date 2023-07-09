@@ -138,25 +138,33 @@ terraform apply tfplan
 
 ----------
 
+From your Cloud9 IDE terminal get and save the VPC endpoint:
+
+```bash
+aws ssm get-parameter --name /ecsworkshop/proxy-dns --query Parameter.Value --output text
+```
 
 Connect to the instance via [SSM Fleet](https://eu-west-1.console.aws.amazon.com/systems-manager/managed-instances?region=eu-west-1)
+
+Select the instance "test-squid"
+Use the option, `Node action` then `Start terminal session`
 
 From the OS prompt:
 
 ```bash
-proxyurl=$(aws ssm get-parameter --name /ecsworkshop/proxy-dns --query Parameter.Value --output text)
+proxyurl=<the value you saved form the Cloud9 IDE>
 export http_proxy=http://${proxyurl}:3128
 export https_proxy=http://${proxyurl}:3128
 ```
 
 
-### this works
+### this works:
 
 ```bash
 curl https://aws.amazon.com
 ```
 
-### this does not
+### this does not:
 
 ```bash
 curl https://www.microsoft.com
