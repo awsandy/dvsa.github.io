@@ -95,7 +95,7 @@ Find the load balancer URL
 ```
 lburl=$(aws ssm get-parameter --name /ecsworkshop/squid-lbdns --region eu-west-1 --query Parameter.Value --output text)
 
-curl $lb-url:8080
+curl $lburl:8080
 
 ```
 
