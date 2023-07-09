@@ -144,7 +144,7 @@ From your Cloud9 IDE terminal get and save the VPC endpoint DNS entry:
 aws ssm get-parameter --name /ecsworkshop/proxy-dns --query Parameter.Value --output text
 ```
 
-Connect to the instance via [SSM Fleet](https://eu-west-1.console.aws.amazon.com/systems-manager/managed-instances?region=eu-west-1)
+Connect to the instance via [SSM Fleet](https://eu-west-1.console.aws.amazon.com/systems-manager/managed-instances?region=eu-west-1){:target="_blank"}
 
 Select the instance "test-squid"
 Use the option, `Node action` then `Start terminal session`
