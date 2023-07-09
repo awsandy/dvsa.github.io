@@ -23,12 +23,11 @@ git clone https://github.com/awsandy/ecs-squid.git
 cd ~/environment/ecs-squid
 ```
 
+Next run the setup script to install various tools we wil use in the workshop, setup some environment variables, resize the root file system to 32GB and change the Cloud9 IDE to use the predefined `eksworkshop-admin` instance profile/role.
+
 ```bash
 source scripts/setup.sh
 ```
-
-
-Check you see messages at the end of the output that terraform, kubectl, jq and aws in the path. Also that the AWS_REGION is set and the ACCOUNT_ID to a 12 digit number.
 
 
 Expected output will be similar to:

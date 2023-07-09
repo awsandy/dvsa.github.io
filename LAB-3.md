@@ -25,7 +25,7 @@ pack build my-app --buildpack paketo-buildpacks/php \
 ```
 
 ```bash
-docker run --interactive --tty --env PORT=8080 --publish 8080:8080 php-builtin-server-sample
+docker run --interactive --tty --env PORT=8080 --publish 8080:8080 my-app
 ```
 
 ```bash
@@ -39,12 +39,23 @@ or preview app in Cloud9
 ### Deploy the app to ECR
 
 Push the docker image to ECR
-
 Use terraform to create 
+Add an ECS Task definition using the ECR image
+Add an Service for this application 
 
-An ECS Task definition using the ECR image
-An Service for this application 
+```bash
+cd ~/environment/ecs-squid/lab3/tf-app
+```
 
+
+Find the load balancer URL
+
+```
+lb-url=$(aws ssm get-parameter --name /ecsworkshop/proxy-dns --region eu-west-2 --query Parameter.Value --output text)
+
+curl $lb-url:8080
+
+```
 
 -------
 
@@ -57,6 +68,16 @@ Repeat the above steps
 
 
 -----
+
+
+
+
+## Cleanup
+
+```bash
+cd ~/environment/ecs-squid/lab3/tf-example
+terraform destroy -auto-approve
+```
 
 ## [Next](./WRAPUP.md)
 
