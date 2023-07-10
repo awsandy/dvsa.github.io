@@ -152,7 +152,7 @@ Use the option, `Node action` then `Start terminal session`
 From the OS prompt:
 
 ```bash
-proxyurl=<the value you saved form the Cloud9 IDE>
+proxyurl=<the value you saved from the Cloud9 IDE>
 export http_proxy=http://${proxyurl}:3128
 export https_proxy=http://${proxyurl}:3128
 ```
@@ -164,7 +164,7 @@ export https_proxy=http://${proxyurl}:3128
 curl https://aws.amazon.com
 ```
 
-### this does not:
+### this does not (403 error):
 
 ```bash
 curl https://www.microsoft.com
