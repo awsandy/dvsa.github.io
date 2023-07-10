@@ -173,7 +173,7 @@ curl https://www.microsoft.com
 -------
 
 
-## Cleanup
+### Cleanup
 
 
 ```bash
@@ -181,6 +181,10 @@ cd ~/environment/ecs-squid/lab1/test-instance
 terraform destroy -auto-approve
 ```
 
+
+----
+
+## [Next](./LAB-2.md)
 
 
 

@@ -75,15 +75,8 @@ Expected output similar to:
 There is a Terraform sample to do this:
 
 ```bash
-export TF_VAR_app_name=my-app
-```
-
-
-```bash
 cd ~/environment/ecs-squid/lab3/tf-app
-```
-
-```bash
+export TF_VAR_app_name=my-app
 terraform init
 terraform plan -out tfplan && terraform apply tfplan
 
@@ -92,33 +85,65 @@ terraform plan -out tfplan && terraform apply tfplan
 
 Find the load balancer URL
 
-```
+```bash
 lburl=$(aws ssm get-parameter --name /ecsworkshop/squid-lbdns --region eu-west-1 --query Parameter.Value --output text)
-
 curl $lburl:8080
-
 ```
+
+If the above doesn't work ? - wait a few minutes - and confirm the port is open for you:
+
+Verify connectivity with :
+
+```bash
+namp $lburl -Pn -p 8080 | grep open
+```
+
+This should show as part of the output:
+
+PORT     STATE SERVICE
+8080/tcp **open**  http-proxy
+
+Retry:
+
+```bash
+curl $lburl:8080
+```
+
+*if this is still not working - there is a possibility the routing hasn't been setup correctly - that can usually be fixed by running*
+
+```bash
+cd ~/environment/ecs-squid/lab1/tf-squid
+terraform apply -auto-approve
+cd ~/environment/ecs-squid/lab3/tf-app
+```
+
+Re-test connectivity and the curl as above
+
 
 -------
 
 
-### Explore the other examples here:
+### Optional - Explore the other examples here:
 
+```bash
 cd ~environment/lab3/samples/tree/main/php
+```
+
 
 Repeat the above steps
 
 
 -----
 
-
+----
 
 
 ## Cleanup
 
 ```bash
-cd ~/environment/ecs-squid/lab3/tf-example
+cd ~/environment/ecs-squid/lab3/tf-app
 terraform destroy -auto-approve
+
 ```
 
 ## [Next](./WRAPUP.md)

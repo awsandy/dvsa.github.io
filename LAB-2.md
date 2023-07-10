@@ -46,9 +46,7 @@ siege -c 20 -i http://$lbdns
 [Using X-Ray](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#xray:service-map/map){:target="_blank"}
 
 
-
-
 ----
 
-
+## [Next](./LAB-3.md)
 
