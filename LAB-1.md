@@ -1,5 +1,10 @@
 ## Deploy the squid proxy on ECS
 
+In Lab 2 we will deploy and use the centralised squid on ECS/Fargate pattern described in this [AWS blogpost](https://aws.amazon.com/blogs/networking-and-content-delivery/providing-controlled-internet-access-through-centralised-proxy-servers-using-aws-fargate-and-privatelink/){:target="_blank"}
+
+The AWS CloudFormation deployment template used in the blog post has been refactoted to Terraform for DVSA in this lab.
+
+----
 
 ### Examine the Terraform files
 
