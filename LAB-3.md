@@ -101,6 +101,7 @@ namp $lburl -Pn -p 8080 | grep open
 This should show as part of the output:
 
 PORT     STATE SERVICE
+
 8080/tcp **open**  http-proxy
 
 Retry:
