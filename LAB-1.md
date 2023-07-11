@@ -64,6 +64,10 @@ cd ~/environment/ecs-squid/lab1/scripts
 ./custom-squid.sh
 ```
 
+**Wait for 30 seconds or so before proceeding - to ensure you catch the latest run of code pipeline**
+
+----
+
 Track the build in [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=eu-west-1){:target="_blank"}  and 
 [code build](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects?region=eu-west-1){:target="_blank"}
 
