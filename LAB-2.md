@@ -60,20 +60,20 @@ And the website graphic in the browser showing more frontend and backends respon
 
 #### Let’s review the Container Insights in the console
 
-To review the information, you need to go to the Cloudwatch console and select the Insight section, then select Container Insights.
+To review the information, you need to go to the [Cloudwatch console](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#container-insights:infrastructure/map){:target="_blank"} and select the Insight section, then select Container Insights.
 
 Within this console you will find different views, like the Map View, that will let you see in a graphical representation the services and task of you ECS cluster and some metrics when you select the service from the map:
 
-[Using Container Insights](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#container-insights:infrastructure/map){:target="_blank"}
 
 ![fleet](./static/images/cw1.png)
 
 #### Review traces with X-Ray
 
 
-Once we have deployed them we will need to wait like 5 minutes to start seeing traces. Now access the X-Ray console. Once in the X-Ray console, select Service Map from the left hand side menu. Wait a few seconds for the service map to render.
+Once we have deployed them we will need to wait like 5 minutes to start seeing traces. Now access the [X-Ray console.](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#xray:service-map/map){:target="_blank"}
 
-[Using X-Ray](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#xray:service-map/map){:target="_blank"}
+
+Once in the X-Ray console, select Service Map from the left hand side menu. Wait a few seconds for the service map to render.
 
 Whenever you select a node or edge on an AWS X-Ray service map, the X-Ray console shows additional information about the node or edge.
 
