@@ -1,17 +1,15 @@
 ## Wrap Up
 
 
-
-
-### Survey Link
+## Survey Link
 
 AWS hopes DVSA found todays workshop useful, we would appreciate some feedback via [this short survey](https://www.pulse.aws/survey/PY2MIHA0){:target="_blank"}
 
 ----
 
-### References
+## References
 
-Useful AWS reference materials:
+### Useful AWS reference materials:
 
 * [The ECS Workshop](https://ecsworkshop.com/){:target="_blank"}
 * [The AWS Observability Workshop](https://catalog.workshops.aws/observability/en-US){:target="_blank"}
@@ -33,6 +31,7 @@ Useful AWS reference materials:
 
 * [Managing secrets using the Secrets Manager API and the AWS SDK for PHP Version 3](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/secretsmanager-examples-manage-secret.html){:target="_blank"}
 
+----
 
 ### 3rd Party References (not endorsed by AWS)
 

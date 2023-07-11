@@ -135,16 +135,17 @@ Repeat the above steps
 
 -----
 
-----
 
 
-## Cleanup
+## Cleanup
 
 ```bash
 cd ~/environment/ecs-squid/lab3/tf-app
 terraform destroy -auto-approve
 
 ```
+
+---
 
 ## [Next](./WRAPUP.md)
 
