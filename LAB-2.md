@@ -20,7 +20,7 @@ terraform apply tfplan
 
 Monitor the ECS console and wait for all the services Last Deployment state to be indicated as  `completed`
 
-![completed](../../static/images/ecs-completed.png)
+![completed](./static/images/ecs-completed.png)
 
 
 ### Start a siege (workload)
