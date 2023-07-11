@@ -26,7 +26,7 @@ AWS hopes DVSA found todays workshop useful, we would appreciate some feedback v
 * [Reducing AWS Fargate Startup Times with zstd Compressed Container Images](https://aws.amazon.com/blogs/containers/reducing-aws-fargate-startup-times-with-zstd-compressed-container-images/){:target="_blank"}
 
 * [Migrating from Squid Web Proxy to AWS Network Firewall](https://aws.amazon.com/blogs/networking-and-content-delivery/migrating-from-squid-web-proxy-to-aws-network-firewall/){:target="_blank"}
-* [](){:target="_blank"}
+
 * [Creating container images with Cloud Native Buildpacks using AWS CodeBuild and AWS CodePipeline](https://aws.amazon.com/blogs/containers/creating-container-images-with-cloud-native-buildpacks-using-aws-codebuild-and-aws-codepipeline/){:target="_blank"}
 
 * [Managing secrets using the Secrets Manager API and the AWS SDK for PHP Version 3](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/secretsmanager-examples-manage-secret.html){:target="_blank"}
