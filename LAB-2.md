@@ -44,6 +44,17 @@ siege -c 20 -i http://$lbdns
 
 ----
 
+After a few minutes you should be able to see the autoscaling of the frontend and crystal services:
+
+![fleet](./static/images/autoscale1.png)
+
+You may also notice the lower response times reported by siege.
+
+And the website graphic in the browser showing more frontend and backends responding to queries.
+
+
+----
+
 ### Explore the observabilty of the deployed application:
 
 
