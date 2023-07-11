@@ -27,11 +27,15 @@ Using the console find and explore these resources
 
 * [The ECS Clusters](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters){:target="_blank"}
 * [ECS service](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1){:target="_blank"}
-* ECS tasks
-* Task definitions
-* Load Balancers
+* [ECS tasks](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/fargate/tasks?region=eu-west-1){:target="_blank"}
+* [Task definitions](https://eu-west-1.console.aws.amazon.com/ecs/v2/task-definitions?region=eu-west-1){:target="_blank"}
 
-Note which task definition is deployed and which container image 
+Note which task definition is deployed and which container image is being used.
+
+* [Load Balancers](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#LoadBalancers:){:target="_blank"}
+* [Target Groups](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#TargetGroups:){:target="_blank"}
+
+
 
 -------
 
