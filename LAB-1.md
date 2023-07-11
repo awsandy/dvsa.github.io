@@ -154,6 +154,9 @@ Connect to the instance via [SSM Fleet](https://eu-west-1.console.aws.amazon.com
 Select the instance "test-squid"
 Use the option, `Node action` then `Start terminal session`
 
+
+![fleet](./static/images/Fleet-Mgr.png)
+
 From the OS prompt:
 
 ```bash
@@ -180,6 +183,8 @@ curl https://www.microsoft.com
 
 ### Cleanup
 
+
+**From the Cloud9 Terminal**
 
 ```bash
 cd ~/environment/ecs-squid/lab1/test-instance
