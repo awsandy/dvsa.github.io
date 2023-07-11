@@ -36,7 +36,6 @@ Note which task definition is deployed and which container image is being used.
 * [Target Groups](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#TargetGroups:){:target="_blank"}
 
 
-
 -------
 
 ### Setup a custom squid docker image
