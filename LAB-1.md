@@ -245,10 +245,31 @@ curl https://aws.amazon.com
 curl https://www.microsoft.com
 ```
 
-Next - close the fleet manager terminal session using the `Terminate` button.
+
 
 -------
 
+### Optional: Add Microsoft to the allowed list
+
+cd ~/environment/ecs-squid/lab1/scripts/squid-proxy 
+
+edit the allowed list and add a line `www.microsoft.com`
+
+```bash
+git add .
+git commit -m "added Microsoft"
+git push origin main
+```
+
+As before observe the pipleine stages and the ECS service redeployment to completion.
+
+
+redo the `curl https://www.microsoft.com` in the test instance terminal (not in Cloud9)
+
+
+Next - close the fleet manager terminal session using the `Terminate` button.
+
+-----
 
 ### Cleanup
 
