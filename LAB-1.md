@@ -24,6 +24,7 @@ terraform init
 terraform validate
 terraform plan -out tfplan
 terraform apply tfplan
+
 ```
 
 ### Use the AWS console to verify / explore the deployment
@@ -202,6 +203,7 @@ terraform init
 terraform validate
 terraform plan -out tfplan
 terraform apply tfplan
+
 ```
 
 ----------

@@ -9,16 +9,14 @@ cd ~/environment/ecs-squid/lab2/mesh-microservice-app/
 ```bash
 terraform init
 terraform plan -out tfplan
-```
-
-```bash
 terraform apply tfplan
+
 ```
 
 
 ----
 
-Monitor the ECS console and wait for all the services Last Deployment state to be indicated as  `completed`
+Monitor the ECS console and wait for all the services Last Deployment state to be indicated as `Completed`
 
 ![completed](./static/images/ecs-completed.png)
 
