@@ -90,7 +90,9 @@ lburl=$(aws ssm get-parameter --name /ecsworkshop/squid-lbdns --region eu-west-1
 curl $lburl:8080
 ```
 
-If the above doesn't work ? - wait a few minutes - and confirm the port is open for you:
+If the above doesn't work ? - check the new service has reached completed status in the `squid-ecr-ECSCluster` [ECS cluster](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1){:target="_blank"}
+
+![fleet](./static/images/my-app.png)
 
 Verify connectivity with :
 
@@ -104,22 +106,11 @@ PORT     STATE SERVICE
 
 8080/tcp **open**  http-proxy
 
-Retry:
+Retry the curl:
 
 ```bash
 curl $lburl:8080
 ```
-
-*if this is still not working - there is a possibility the routing hasn't been setup correctly - that can usually be fixed by running*
-
-```bash
-cd ~/environment/ecs-squid/lab1/tf-squid
-terraform apply -auto-approve
-cd ~/environment/ecs-squid/lab3/tf-app
-```
-
-Re-test connectivity and the curl as above
-
 
 -------
 
