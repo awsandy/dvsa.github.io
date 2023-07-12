@@ -16,7 +16,7 @@ terraform apply tfplan
 
 ----
 
-Monitor the ECS console and wait for all the services Last Deployment state to be indicated as `Completed`
+Monitor the [ECS console](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/container-demo/services?region=eu-west-1){:target="_blank"} and wait for all the services Last Deployment state to be indicated as `Completed`
 
 ![completed](./static/images/ecs-completed.png)
 
