@@ -249,6 +249,8 @@ curl https://www.microsoft.com
 
 **From the Cloud9 Terminal**
 
+Cleanup the test instance and only the test instance, please do not delete anything else.
+
 ```bash
 cd ~/environment/ecs-squid/lab1/test-instance
 terraform destroy -auto-approve
