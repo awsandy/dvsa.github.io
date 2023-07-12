@@ -132,7 +132,7 @@ You can also track the build part of the pipeline in [code build](https://eu-wes
 ----
 
 
-After the build is completed look for the new Docker image in the ECR [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1){:target="_blank"} for the new custom squid image.
+After the build is completed look for the new Docker image in the [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1){:target="_blank"} for the new custom squid image.
 
 
 
@@ -146,7 +146,7 @@ This pipleine included as part of the `Build` stage:
 
 * Builds a docker image using the Dockerfile and other files in our codecommit repo
 * Pushes the built image to ECR
-* Created a build artifact `imageDetail.json` and stored in in the s3 bucket: ` squid-ecr-codepipeartifact-xxxxxxxxxxxx-eu-west-1/squid-ecr-SquidProxy/BuildOutpu/`
+* Created a build artifact `imageDetail.json` and stored in in the s3 bucket: `squid-ecr-codepipeartifact-xxxxxxxxxxxx-eu-west-1/squid-ecr-SquidProxy/BuildOutpu/`
 
 `imageDetail.json` is a zipped file and contains content like the following:
 
@@ -159,7 +159,7 @@ This pipleine included as part of the `Build` stage:
 ]
 ```
 
-This artifact/file is passed into the `Deploy` stage (targetting ECS):
+This artifact/file is passed into the `Deploy` stage (targeting ECS):
 
 * The deployment engine then finds any task definitions with the container label `squid-ecr-SquidProxyContainer` in our cluster and service. (see the contents of the aws_codepipeline*.tf file)
 * Creates a new verison of the task definition - with an updated imageUri to match the contents above
