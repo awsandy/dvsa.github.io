@@ -27,9 +27,14 @@ AWS hopes DVSA found todays workshop useful, we would appreciate some feedback v
 
 * [Migrating from Squid Web Proxy to AWS Network Firewall](https://aws.amazon.com/blogs/networking-and-content-delivery/migrating-from-squid-web-proxy-to-aws-network-firewall/){:target="_blank"}
 
+
 * [Creating container images with Cloud Native Buildpacks using AWS CodeBuild and AWS CodePipeline](https://aws.amazon.com/blogs/containers/creating-container-images-with-cloud-native-buildpacks-using-aws-codebuild-and-aws-codepipeline/){:target="_blank"}
 
 * [Managing secrets using the Secrets Manager API and the AWS SDK for PHP Version 3](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/secretsmanager-examples-manage-secret.html){:target="_blank"}
+
+* [X-Ray and PHP](https://aws.amazon.com/about-aws/whats-new/2022/09/aws-x-ray-support-tracing-php-applications-opentelemetry-public-preview/){:target="_blank"}
+
+* [Custom CloudWatch metrics and PHP](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/cw-examples-publishing-custom-metrics.html){:target="_blank"}
 
 ----
 
