@@ -1,6 +1,11 @@
 ## Deploy the squid proxy on ECS
 
-In Lab 1 we will deploy and use the centralised squid on ECS/Fargate pattern described in this [AWS blogpost](https://aws.amazon.com/blogs/networking-and-content-delivery/providing-controlled-internet-access-through-centralised-proxy-servers-using-aws-fargate-and-privatelink/){:target="_blank"}
+In Lab 1 we will deploy and use the centralised squid on ECS/Fargate pattern 
+
+![fleet](./static/images/proxy-blog.png)
+
+As described in this [AWS blogpost](https://aws.amazon.com/blogs/networking-and-content-delivery/providing-controlled-internet-access-through-centralised-proxy-servers-using-aws-fargate-and-privatelink/){:target="_blank"}
+
 
 The AWS CloudFormation deployment template used in the blog post has been refactored to Terraform for DVSA in this lab.
 
@@ -26,14 +31,35 @@ terraform apply tfplan
 Using the console find and explore these resources
 
 * [The ECS Clusters](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters){:target="_blank"}
+
+![fleet](./static/images/ecs1.png)
+
+
 * [ECS service](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1){:target="_blank"}
-* [ECS tasks](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/fargate/tasks?region=eu-west-1){:target="_blank"}
+
+
+![fleet](./static/images/ecs2.png)
+
+
+* [ECS tasks](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/tasks?region=eu-west-1){:target="_blank"}
+
+![fleet](./static/images/ecs3.png)
+
 * [Task definitions](https://eu-west-1.console.aws.amazon.com/ecs/v2/task-definitions?region=eu-west-1){:target="_blank"}
+
+![fleet](./static/images/ecs4.png)
+
 
 Note which task definition is deployed and which container image is being used.
 
 * [Load Balancers](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#LoadBalancers:){:target="_blank"}
+
+![fleet](./static/images/ecs5.png)
+
 * [Target Groups](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#TargetGroups:){:target="_blank"}
+
+
+![fleet](./static/images/ecs6.png)
 
 
 -------
