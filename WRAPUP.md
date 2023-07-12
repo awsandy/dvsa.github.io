@@ -1,9 +1,9 @@
 ## Wrap Up
 
 
-## Survey Link
+## Survey Link
 
-AWS hopes DVSA found todays workshop useful, we would appreciate some feedback via [this short survey](https://www.pulse.aws/survey/PY2MIHA0){:target="_blank"}
+AWS hopes DVSA found the workshop useful, we would appreciate some feedback via [this short survey](https://www.pulse.aws/survey/PY2MIHA0){:target="_blank"}
 
 ----
 
