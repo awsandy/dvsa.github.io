@@ -172,7 +172,7 @@ This artifact/file is passed into the `Deploy` stage (targeting ECS):
 
 Using the console
 
-* Check you see two versions of our definition
+* Check you see two versions of the task definition
 
 ![fleet](./static/images/2tasks.png)
 
@@ -213,6 +213,8 @@ From your Cloud9 IDE terminal get and save the VPC endpoint DNS entry:
 ```bash
 aws ssm get-parameter --name /ecsworkshop/proxy-dns --query Parameter.Value --output text
 ```
+
+Save this to your clipboard (crtl-C)
 
 Connect to the instance via [SSM Fleet](https://eu-west-1.console.aws.amazon.com/systems-manager/managed-instances?region=eu-west-1){:target="_blank"}
 
