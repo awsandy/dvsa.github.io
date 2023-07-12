@@ -23,7 +23,7 @@ Monitor the [ECS console](https://eu-west-1.console.aws.amazon.com/ecs/v2/cluste
 
 ### Start a siege (workload)
 
-In Cloud9 open new terminal window:
+In Cloud9 open a **new terminal window**:
 
 get the load balancer DNS name
 
@@ -32,13 +32,19 @@ lbdns=$(aws ssm get-parameter --name /ecsworkshop/meshlb-dns --query Parameter.V
 echo $lbdns
 ```
 
-Open a browser tab on that website address
+Open a new browser tab on that website address and you should see an animation that looks like this:
+
+![completed](./static/images/animation.png)
+
+-----
 
 Then start a "siege":
 
 ```bash
 siege -c 20 -i http://$lbdns
 ```
+
+Note some of the initial response times from the siege
 
 ----
 
