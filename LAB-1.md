@@ -147,7 +147,7 @@ This pipleine included as part of the `Build` stage:
 
 * Builds a docker image using the Dockerfile and other files in our codecommit repo
 * Pushes the built image to ECR
-* Created a build artifact `imageDetail.json` and stored in in the s3 bucket: `squid-ecr-codepipeartifact-xxxxxxxxxxxx-eu-west-1/squid-ecr-SquidProxy/BuildOutpu/`
+* Created a build artifact `imageDetail.json` and stored in in the [S3 bucket](https://s3.console.aws.amazon.com/s3/home?region=eu-west-1#){:target="_blank"}  : `squid-ecr-codepipeartifact-xxxxxxxxxxxx-eu-west-1/squid-ecr-SquidProxy/BuildOutpu/`
 
 `imageDetail.json` is a zipped file and contains content like the following:
 
