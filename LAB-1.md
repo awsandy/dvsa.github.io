@@ -35,20 +35,32 @@ Using the console find and explore these resources
 ![fleet](./static/images/ecs1.png)
 
 
+----
+
+
 * [ECS service](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1){:target="_blank"}
 
 
 ![fleet](./static/images/ecs2.png)
 
 
-* [ECS tasks](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/tasks?region=eu-west-1){:target="_blank"}
+-----
+
+
+* [ECS Tasks](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/tasks?region=eu-west-1){:target="_blank"}
 
 ![fleet](./static/images/ecs3.png)
 
-* [Task definitions](https://eu-west-1.console.aws.amazon.com/ecs/v2/task-definitions?region=eu-west-1){:target="_blank"}
+Note the `Image URI` in the bottom half of the screen
+
+
+------
+
+* [Task Definitions](https://eu-west-1.console.aws.amazon.com/ecs/v2/task-definitions?region=eu-west-1){:target="_blank"}
 
 ![fleet](./static/images/ecs4.png)
 
+Click the task definitions name to see more details
 
 Note which task definition is deployed and which container image is being used.
 
@@ -56,15 +68,21 @@ Note which task definition is deployed and which container image is being used.
 
 ![fleet](./static/images/ecs5.png)
 
+Select the Load Balancers radio box the see/explore more details
+
+----
+
 * [Target Groups](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#TargetGroups:){:target="_blank"}
 
 
 ![fleet](./static/images/ecs6.png)
 
+Select the target group radio box the see/explore more details
 
 -------
 
-### Setup a custom squid docker image
+
+## Setup a custom squid docker image
 
 
 Examine the files in this directory
