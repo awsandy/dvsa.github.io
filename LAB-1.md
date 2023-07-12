@@ -175,7 +175,7 @@ Using the console
 
 * Check you see two versions of our definition
 
-![fleet](./static/images/proxy-blog.png)
+![fleet](./static/images/2tasks.png)
 
 
 * Check the newest version of the task definition refers to the Image URI in the ECR repo.
