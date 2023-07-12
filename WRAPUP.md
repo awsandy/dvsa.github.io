@@ -14,14 +14,10 @@ AWS hopes DVSA found todays workshop useful, we would appreciate some feedback v
 * [The ECS Workshop](https://ecsworkshop.com/){:target="_blank"}
 * [The AWS Observability Workshop](https://catalog.workshops.aws/observability/en-US){:target="_blank"}
 * [IAM Roles and ECS](https://catalog.workshops.aws/startup-security-baseline/en-US/c-securing-your-workload/level-1-controls/2-use-roles-for-compute-environments/2-3-create-role-for-container){:target="_blank"}
-
 * [ECS Best Practices](https://docs.aws.amazon.com/AmazonECS/latest/bestpracticesguide/intro.html){:target="_blank"}
-
-* [Passing sensitive data to a container](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html){:target="_blank"}
 
 * [Sharing Amazon ECR repositories with multiple accounts using AWS Organizations](https://aws.amazon.com/blogs/containers/sharing-amazon-ecr-repositories-with-multiple-accounts-using-aws-organizations/){:target="_blank"}
 * [Amazon ECR in Multi-Account and Multi-Region Architectures](https://aws.amazon.com/blogs/containers/amazon-ecr-in-multi-account-and-multi-region-architectures/){:target="_blank"}
-
 * [ECR Lifecycle policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html#lifecycle_policy_parameters){:target="_blank"}
 * [Reducing AWS Fargate Startup Times with zstd Compressed Container Images](https://aws.amazon.com/blogs/containers/reducing-aws-fargate-startup-times-with-zstd-compressed-container-images/){:target="_blank"}
 
@@ -30,10 +26,9 @@ AWS hopes DVSA found todays workshop useful, we would appreciate some feedback v
 
 * [Creating container images with Cloud Native Buildpacks using AWS CodeBuild and AWS CodePipeline](https://aws.amazon.com/blogs/containers/creating-container-images-with-cloud-native-buildpacks-using-aws-codebuild-and-aws-codepipeline/){:target="_blank"}
 
+* [Passing sensitive data to a container](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html){:target="_blank"}
 * [Managing secrets using the Secrets Manager API and the AWS SDK for PHP Version 3](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/secretsmanager-examples-manage-secret.html){:target="_blank"}
-
 * [X-Ray and PHP](https://aws.amazon.com/about-aws/whats-new/2022/09/aws-x-ray-support-tracing-php-applications-opentelemetry-public-preview/){:target="_blank"}
-
 * [Custom CloudWatch metrics and PHP](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/cw-examples-publishing-custom-metrics.html){:target="_blank"}
 
 ----
