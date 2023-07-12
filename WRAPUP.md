@@ -46,6 +46,8 @@ AWS hopes DVSA found the workshop useful, we would appreciate some feedback via 
 * [How to Build PHP Apps with Paketo Buildpacks](https://paketo.io/docs/howto/php/){:target="_blank"}
 * [How to verify cosigned container images In Amazon ECS](https://www.chainguard.dev/unchained/cosign-verify-ecs){:target="_blank"}
 
+* [Continuous deployment to ECS using github actions and Terraform (youtube)](https://www.youtube.com/watch?v=4jhxQoRravI){:target="_blank"}
+
 ----
 
 * [aws2tf - a tool for converting stack sets and/or AWS deployments to Terraform](https://github.com/aws-samples/aws2tf){:target="_blank"}
