@@ -93,7 +93,5 @@ To see the detailed trace information click the `view traces` button.
 ----
 
 
-
-
 ## [Next](./LAB-3.md)
 
