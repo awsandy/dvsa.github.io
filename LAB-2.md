@@ -77,7 +77,7 @@ Within this console you will find different views, like the Map View, that will 
 #### Review traces with X-Ray
 
 
-Once we have deployed them we will need to wait like 5 minutes to start seeing traces. Now access the [X-Ray console.](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#xray:service-map/map){:target="_blank"}
+Once we have deployed them we will need to wait a few minutes to start seeing traces. Now access the [X-Ray console.](https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#xray:service-map/map){:target="_blank"}
 
 
 Once in the X-Ray console, select Service Map from the left hand side menu. Wait a few seconds for the service map to render.
