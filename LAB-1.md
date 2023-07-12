@@ -241,6 +241,8 @@ curl https://aws.amazon.com
 curl https://www.microsoft.com
 ```
 
+Next - close the fleet manager terminal session using the `Terminate` button.
+
 -------
 
 
