@@ -57,6 +57,7 @@ You may also notice the lower response times reported by siege.
 And the website graphic in the browser showing more frontend and backends responding to queries.
 
 *What can you find in CloudWatch (Alarms) and the ECS Service definition that caused this auto scaling to happen ?*
+
 *Where was this defined in the Terraform files?*
 
 
