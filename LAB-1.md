@@ -17,7 +17,7 @@ The AWS CloudFormation deployment template used in the blog post has been refact
 cd ~/environment/ecs-squid/lab1/tf-squid
 ```
 
-### Deploy the squid application
+### Deploy the squid proxy onto ECS
 
 ```bash
 terraform init
@@ -38,7 +38,7 @@ Using the console find and explore these resources
 ----
 
 
-* [ECS service](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1){:target="_blank"}
+* [ECS Services](https://eu-west-1.console.aws.amazon.com/ecs/v2/clusters/squid-ecr-ECSCluster/services?region=eu-west-1){:target="_blank"}
 
 
 ![fleet](./static/images/ecs2.png)
@@ -63,6 +63,8 @@ Note the `Image URI` in the bottom half of the screen
 Click the task definitions name to see more details
 
 Note which task definition is deployed and which container image is being used.
+
+----
 
 * [Load Balancers](https://eu-west-1.console.aws.amazon.com/ec2/home?region=eu-west-1#LoadBalancers:){:target="_blank"}
 
@@ -103,7 +105,7 @@ And the `Dockerfile` for building the custom container image.
 ----
 
 
-The following script will then use these files to build a custom image for squid - using a CICD pipeline that has already been setup:
+The following script will then use these files to build a custom image for squid - using a CICD pipeline that has already been setup - this is triggered by committing the files to the codecommit repository (previously setup):
 
 
 ```bash
@@ -115,65 +117,77 @@ cd ~/environment/ecs-squid/lab1/scripts
 
 ----
 
-Track the build in [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=eu-west-1){:target="_blank"}  and 
+Track the build in [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=eu-west-1){:target="_blank"}  
+
+
+![fleet](./static/images/ecs6.png)
+
+You should see the pipeline "in progress"
+
+
+----
+
+YOu can also track the build:
+
+
 [code build](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects?region=eu-west-1){:target="_blank"}
 
-After the built completes:
-Observe the [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1){:target="_blank"} for the new custom squid image
+----
 
+
+After the build is completed look for the new Docker image in the ECR [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1){:target="_blank"} for the new custom squid image
+
+
+
+Id due course the pipeline will complete including the deploy stage
+
+
+![fleet](./static/images/deployed.png)
+
+The Build phase:
+
+* Builds a docker image using the Dockerfile and other files in our codecommit repo
+* Pushes the built image to ECR
+* Created a build artifact `imageDetail.json` and stored in in the s3 bucket: ` squid-ecr-codepipeartifact-xxxxxxxxxxxx-eu-west-1/squid-ecr-SquidProxy/BuildOutpu/`
+
+`imageDetail.json` is a zipped file and contains content like the following:
+
+```
+[
+    {   
+        "name":"squid-ecr-SquidProxyContainer",
+        "imageUri":"xxxxxxxxxxxx.dkr.ecr.eu-west-1.amazonaws.com/squid-ecr-ecrrepository:latest"
+    }
+]
+```
+
+This artifact/file is passed into the deploy stage (targetting ECS):
+
+* The deployment engine then finds any task definitions with the container label `squid-ecr-SquidProxyContainer` in our cluster and service. (see the contents of the aws_codepipeline*.tf file)
+* Creates a new verison of the task definition - with an updated imageUri to match the contents above
+* Triggers the ECS service using that task definition to redeploy with the updated task definition 
 
 -------
 
-## Adjust Terraform to deploy our custom squid container
+## Verify the code pipeline changes
 
-### Check the ECR repo for the custom squid image
+Using the console
 
-```bash
-cd ~/environment/ecs-squid/lab1/tf-squid
-```
+* Check you see two versions of our definition
 
-Observe the difference in these two files definition of which image to use:
-
-```bash
-grep task_definition aws_ecs_service__squid-ecr-ECSService.tf
-```
-
-```bash
-grep task_definition aws_ecs_service__squid-ecr-ECSService.tf.custom
-```
-
-and the corresponding different images in the task definitions
-
-```bash
-grep image aws_ecs_task_definition__squip--standard-ecr-ECSTaskDefinition.tf
-```
-
-image = "public.ecr.aws/ubuntu/**squid**:latest"
-
-```bash
-grep image aws_ecs_task_definition__squid--custom-ecr-ECSTaskDefinition.tf
-```
-
-image = format("%s.dkr.ecr.%s.amazonaws.com/**squid-ecr-ecrrepository**:latest", data.aws_caller_identity.current.account_id, data.aws_region.current.name)
+![fleet](./static/images/proxy-blog.png)
 
 
-Next copy the custom service definition into place:
+* Check the newest version of the task definition refers to the Image URI in the ECR repo.
 
-```bash 
-cp aws_ecs_service__squid-ecr-ECSService.tf.custom aws_ecs_service__squid-ecr-ECSService.tf
-```
 
-Confirm the change being made with terraform plan
+![fleet](./static/images/taskdef.png)
 
-```bash
-terraform plan -out tfplan
-```
+* Check the ECS service is deploying / has finished deploying (Completed) new tasks using the new task definition version (ie. not version 1)
 
-Apply the change:
+![fleet](./static/images/redeploy.png)
 
-```bash
-terraform apply tfplan
-```
+
 
 -------
 
