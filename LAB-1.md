@@ -251,11 +251,9 @@ curl https://www.microsoft.com
 
 ### Optional: Add Microsoft to the allowed list
 
-cd ~/environment/ecs-squid/lab1/scripts/squid-proxy 
-
-edit the allowed list and add a line `www.microsoft.com`
-
 ```bash
+cd ~/environment/ecs-squid/lab1/scripts/squid-proxy 
+echo "www.microsoft.com" >> allowedlist.txt
 git add .
 git commit -m "added Microsoft"
 git push origin main
