@@ -83,7 +83,7 @@ terraform plan -out tfplan && terraform apply tfplan
 ```
 
 
-Find the load balancer URL
+Find the load balancer URL and curl it:
 
 ```bash
 lburl=$(aws ssm get-parameter --name /ecsworkshop/squid-lbdns --region eu-west-1 --query Parameter.Value --output text)
