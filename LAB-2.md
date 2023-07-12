@@ -38,7 +38,7 @@ Open a new browser tab on that website address and you should see an animation t
 
 -----
 
-Then start a "siege":
+Then back in your new terminal window start a "siege":
 
 ```bash
 siege -c 20 -i http://$lbdns
