@@ -117,34 +117,32 @@ cd ~/environment/ecs-squid/lab1/scripts
 
 ----
 
-Track the build in [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=eu-west-1){:target="_blank"}  
+Track the build in [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codepipeline/pipelines?region=eu-west-1){:target="_blank"}  You should see the pipeline "in progress"
 
 
-![fleet](./static/images/ecs6.png)
+![fleet](./static/images/pipe1.png)
 
-You should see the pipeline "in progress"
+
 
 
 ----
 
-YOu can also track the build:
-
-
-[code build](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects?region=eu-west-1){:target="_blank"}
+You can also track the build part of the pipeline in [code build](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects?region=eu-west-1){:target="_blank"}
 
 ----
 
 
-After the build is completed look for the new Docker image in the ECR [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1){:target="_blank"} for the new custom squid image
+After the build is completed look for the new Docker image in the ECR [ECR repo](https://eu-west-1.console.aws.amazon.com/ecr/repositories?region=eu-west-1){:target="_blank"} for the new custom squid image.
 
 
 
-Id due course the pipeline will complete including the deploy stage
+In due course the [code pipeline](https://eu-west-1.console.aws.amazon.com/codesuite/codebuild/projects?region=eu-west-1){:target="_blank"} will complete including the deploy stage
 
 
 ![fleet](./static/images/deployed.png)
 
-The Build phase:
+
+This pipleine included as part of the `Build` stage:
 
 * Builds a docker image using the Dockerfile and other files in our codecommit repo
 * Pushes the built image to ECR
@@ -161,11 +159,11 @@ The Build phase:
 ]
 ```
 
-This artifact/file is passed into the deploy stage (targetting ECS):
+This artifact/file is passed into the `Deploy` stage (targetting ECS):
 
 * The deployment engine then finds any task definitions with the container label `squid-ecr-SquidProxyContainer` in our cluster and service. (see the contents of the aws_codepipeline*.tf file)
 * Creates a new verison of the task definition - with an updated imageUri to match the contents above
-* Triggers the ECS service using that task definition to redeploy with the updated task definition 
+* Triggers the ECS service using that task definition to redeploy with the updated task definition version
 
 -------
 
