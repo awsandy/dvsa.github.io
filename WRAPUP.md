@@ -25,6 +25,11 @@ AWS hopes DVSA found the workshop useful, we would appreciate some feedback via 
 
 
 * [Creating container images with Cloud Native Buildpacks using AWS CodeBuild and AWS CodePipeline](https://aws.amazon.com/blogs/containers/creating-container-images-with-cloud-native-buildpacks-using-aws-codebuild-and-aws-codepipeline/){:target="_blank"}
+* [AWS's app2container (Workshop .Net and Java)](https://catalog.us-east-1.prod.workshops.aws/workshops/2c1e5f50-0ebe-4c02-a957-8a71ba1e8c89/en-US){:target="_blank"}
+* [Redhat's Source 2 Image](https://github.com/openshift/source-to-image){:target="_blank"}
+* [AWS App Runner (Workshop)](https://www.apprunnerworkshop.com/){:target="_blank"}
+* [AWS co-pilot for ECS (workshop)](https://catalog.workshops.aws/aws-copilot-workshop/en-US){:target="_blank"}
+
 
 * [Passing sensitive data to a container](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html){:target="_blank"}
 * [Managing secrets using the Secrets Manager API and the AWS SDK for PHP Version 3](https://docs.aws.amazon.com/sdk-for-php/v3/developer-guide/secretsmanager-examples-manage-secret.html){:target="_blank"}
