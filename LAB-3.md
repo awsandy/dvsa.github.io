@@ -97,7 +97,7 @@ If the above doesn't work ? - check the new service has reached completed status
 Verify connectivity with :
 
 ```bash
-namp $lburl -Pn -p 8080 | grep open
+nmap $lburl -Pn -p 8080 | grep open
 ```
 
 This should show as part of the output:
