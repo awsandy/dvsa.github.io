@@ -6,7 +6,7 @@ weight: 20
 
 To help you get hands-on as quickly as possible your facilitators have pre-created an AWS environment. In order to access the environment you will need an event access code and an email address. The event access code should have been provided to you upon entry.
 
-To begin with, let's connect to the AWS Workshop Studio, which can be found here https://catalog.us-east-1.prod.workshops.aws/ 
+To begin with, let's connect to the AWS Workshop Studio, which can be [found here](https://catalog.us-east-1.prod.workshops.aws/){:target="_blank"}
 
 * Once the page loads, click the Join Event button which can be found on the right of the page
 
